@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Painter
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
 
+        let painter = Painter()
+        painter.paintRandomColor(onView: view)
+    }
 
 }
 
