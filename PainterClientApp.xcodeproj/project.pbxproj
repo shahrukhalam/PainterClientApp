@@ -13,6 +13,7 @@
 		0147B170254EEE18009C7E33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0147B16E254EEE18009C7E33 /* Main.storyboard */; };
 		0147B172254EEE1A009C7E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0147B171254EEE1A009C7E33 /* Assets.xcassets */; };
 		0147B175254EEE1A009C7E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0147B173254EEE1A009C7E33 /* LaunchScreen.storyboard */; };
+		0147B184254F3725009C7E33 /* libPainter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0147B183254F3725009C7E33 /* libPainter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0147B171254EEE1A009C7E33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0147B174254EEE1A009C7E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0147B176254EEE1A009C7E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0147B183254F3725009C7E33 /* libPainter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPainter.a; path = StaticLibrary/libPainter.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0147B184254F3725009C7E33 /* libPainter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				0147B167254EEE18009C7E33 /* PainterClientApp */,
 				0147B166254EEE18009C7E33 /* Products */,
+				0147B17C254EEE61009C7E33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				0147B176254EEE1A009C7E33 /* Info.plist */,
 			);
 			path = PainterClientApp;
+			sourceTree = "<group>";
+		};
+		0147B17C254EEE61009C7E33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0147B183254F3725009C7E33 /* libPainter.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +303,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StaticLibrary",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Shahrukh.PainterClientApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -308,6 +324,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StaticLibrary",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Shahrukh.PainterClientApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
